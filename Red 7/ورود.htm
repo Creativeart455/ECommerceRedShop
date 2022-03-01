@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="exc7Style.css">
+    <title> Red 7 فروشگاه</title>
+</head>
+
+<body class="loginBodyPage">
+    <header>
+        <div class="small-container">
+            <div class="navbar">
+                <div class="lang" id="lang-translate">
+                    <a id="lang-img-a" href="/Red 8/login.htm"><img id="lang-img"
+                            src="/images/usa_flag.png" width="30px"></a>
+                    <a href="/Red 8/login.htm" id="lang-text">EN</a>
+                </div>
+                <div class="cart navicon">
+                    <a href="/Red 7/سبد_خرید.html"><img src="/images/cart.png" width="30px"></a>
+                </div>
+                <nav id="menuNav">
+                    <ul>
+                        <li><a href="/Red 7/خانه.html">خانه</a></li>
+                        <li><a href="/Red 7/محصولات.htm">محصولات</a></li>
+                        <li><a href="/Red 7/تک_محصول.htm">!پیشنهاد ما</a></li>
+                        <li><a href="/Red 7/درباره_ما.htm">درباره ما</a></li>
+                        <li><a href="/Red 7/ورود.htm">ورود</a></li>
+                    </ul>
+                </nav>
+                <a href="/Red 7/خانه.html"><img class="logo" src="/images/logo.png" width="125px"></a>
+                <div id="hammenu" class="menu navicon">
+                    <img src="/images/menu.png" width="30px" onclick="menutoggle()">
+                </div>
+            </div>
+    </header>
+
+
+    <main>
+        <div class="account-page">
+            <div class="small-container">
+                <div class="row">
+                    <div class="col-2 col">
+                        <img id="big-thumbnail" src="/images/image1.png" alt="">
+                    </div>
+                    <div class="col-2 col">
+                        <div class="form-container">
+                            <div class="form-btn">
+                                <span id="login_label" onclick="onLogin()">ورود</span>
+                                <span id="register_label" onclick="onRegister()">ثبت نام</span>
+                                <hr id="indicator">
+
+                            </div>
+
+                            <form id="logform">
+                                <input type="text" placeholder="نام کاربری یا ایمیل">
+                                <input type="password" placeholder="گذرواژه">
+                                <button type="submit" class="btn">ورود</button>
+                                <a href="">گذر واژه را فراموش کردم</a>
+
+                            </form>
+
+                            <form id="regform">
+                                <input type="text" placeholder="نام کاربری ">
+                                <input type="email" placeholder="ایمیل">
+                                <input type="password" placeholder="گذر واژه">
+                                <button type="submit" class="btn">مرحله ی بعد</button>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- /* --------------------------footer---------------------------- */ -->
+    <footer class="section">
+        <div class="row">
+            <div class="footer-col footer-col-1">
+                <h3>شبکه های اجتماعی</h3>
+                <ul>
+                    <li><a href="#">
+                            <spacer type="horizontal" width="100" height="100"> فیسبوک </spacer><i
+                                class="fa fa-facebook soci" aria-hidden="true"></i>
+                        </a></li>
+                    <li><a href="#">
+                            <spacer type="horizontal" width="100" height="100"> تویتر </spacer><i
+                                class="fa fa-twitter soci" aria-hidden="true"></i>
+                        </a></li>
+                    <li><a href="#">
+                            <spacer type="horizontal" width="100" height="100"> اینستاگرام </spacer><i
+                                class="fa fa-instagram soci" aria-hidden="true"></i>
+                        </a></li>
+                    <li><a href="#">
+                            <spacer type="horizontal" width="100" height="100"> یوتیوب </spacer><i
+                                class="fa fa-youtube soci" aria-hidden="true"></i>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="footer-col footer-col-2">
+                <h3>تارنما های مفید</h3>
+                <ul>
+                    <li><a href="#">کد های تخفیف</a></li>
+                    <li><a href="#">بلاگ پست</a></li>
+                    <li><a href="#">قوانین و مقررات</a></li>
+                    <li><a href="#">باشگاه مشتریان</a></li>
+                </ul>
+            </div>
+            <div class="footer-col footer-col-3">
+                <a href="#"><img src="/images/logo-white.png"></a>
+                <p>هدف ماایجاد ثبات انگیزش ترویج فرهنگ ورزش برای همه است</p>
+            </div>
+            <div class="footer-col footer-col-4">
+                <h3>اپلیکیشن ما را دانلود کنید</h3>
+                <p>اپلیکیشن برای پلتفرم های اندروید و آی او اس</p>
+                <div class="store-imgs">
+                    <a href="#"><img src="/images/app-store.png" width="150px"></a>
+                    <a href="#"><img src="/images/play-store.png" width="150px"></a>
+                </div>
+
+            </div>
+        </div>
+        <div class="hr">
+            <hr>
+            <p>توسط دانیال رنجبر</p>
+        </div>
+    </footer>
+
+
+
+    <script>
+
+        let logform = document.getElementById("logform");
+        let regform = document.getElementById("regform");
+        let indicator = document.getElementById("indicator");
+        let logLab = document.getElementById("login_label");
+        let regLab = document.getElementById("register_label");
+
+        function onRegister() {
+            indicator.style.transform = "translateX(100px)"
+            regform.style.transform = "translateX(0px)"
+            logform.style.transform = "translateX(0px)"
+            regLab.style.fontWeight = "bolder";
+            logLab.style.fontWeight = "normal";
+        }
+        function onLogin() {
+            indicator.style.transform = "translateX(-2px)"
+            regform.style.transform = "translateX(300px)"
+            logform.style.transform = "translateX(300px)"
+            logLab.style.fontWeight = "bolder";
+            regLab.style.fontWeight = "normal";
+        }
+
+    </script>
+
+
+    <!-- <script src="/Red 8/Translate.js"></script> -->
+    <script src="/Red 8/ToggleMenuJS.js"></script>
+    <script src="/Red 8/ToggleForm.js"></script>
+    <script src="https://use.fontawesome.com/fc20c45d31.js"></script>
+</body>
+
+</html>
