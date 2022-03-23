@@ -414,6 +414,7 @@ header.hh {
 footer {
     background-color: black;
     color: whitesmoke;
+    padding: 40px;
 }
 
 footer h3 {
