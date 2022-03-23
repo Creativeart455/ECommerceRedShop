@@ -183,7 +183,7 @@ nav ul li a:hover, .lang:hover a {
 }
 
 .text p {
-    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .col-2 img {
@@ -580,7 +580,11 @@ footer {
     margin-bottom: 15px;
 }
 
-.downstrip {
+.downstrip { 
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    gap: 10px;
     margin-top: 30px;
 
 }
